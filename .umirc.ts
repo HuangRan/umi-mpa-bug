@@ -1,20 +1,14 @@
 import { defineConfig } from "umi";
 
 export default defineConfig({
-  routes: [
-    { path: "/", component: "index" },
-    { path: "/docs", component: "docs" },
-  ],
   npmClient: 'yarn',
   mpa:{
     getConfigFromEntryFile:true,
+    layout:'@/layouts',
+    template:'templates/default.html',
     entry:{
-      index:[
-        '@/pages/index.tsx',
-        {
-          context:{title:'首页'}
-        }
-      ]
+      p1:{describe:'p1'},
+      p2:{describe:'p2'}
     },
   }
 });
